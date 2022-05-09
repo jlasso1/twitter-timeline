@@ -1,0 +1,17 @@
+<div class="modal-header">
+    <h4 class="modal-title">Hi there!</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
+        Description: <input formControlName="description" class="form-control"  placeholder="Description">
+        Image: <input formControlName="imageUrl" class="form-control" placeholder="Image url">
+        Name: <input formControlName="twitterUserName" class="form-control" placeholder="Name">
+        Title: <input formControlName="title" class="form-control" placeholder="Title">
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button> 
+      </form> 
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  </div>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script src='main.js'></script>
+</head>
+<body>
+  <br>
+  <br>
+  <div class="container">
+    <div class="card text-center">
+      <div class="card-header">
+        <h2>{{name}}</h2>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{titleUser}}</h5>
+        <img src={{image}} style="width: 250px;">
+        <p class="card-text">{{description}}</p>
+        <button class="btn btn-primary" style="width: 100px; margin: 3px;" (click)="open()">Editar</button>
+        <button class="btn btn-primary" style="width: 100px;" (click)="getProfile()">Actualizar</button>
+      </div>
+      <div class="card-footer text-muted">
+        <ng-vertical-timeline [data]="events"></ng-vertical-timeline>
+      </div>
+    </div>
+  </div> 
+  <br>
+</body>
+</html>
+
